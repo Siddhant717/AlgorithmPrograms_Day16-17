@@ -6,10 +6,22 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            String str = "SID";
-            int len = str.Length;
-            Console.WriteLine("All the permutations of the string are- ");
-            AlgorithmProblems.generatePermutation(str, 0, len);
+            // String array which has different strings
+            String[] arr = { "Aman", "Siddhant", "Riya", "Shreya", };
+
+            // Searching "Siddhant" string in the given array
+            String x = "Siddhant";
+            int result = AlgorithmProblems.binarySearch(arr, x);
+
+            if (result == -1)
+            {
+                Console.WriteLine("Element is not present");
+            }
+
+            else
+            {
+                Console.WriteLine("Element found at index : " + result);
+            }
         }
     }
 }

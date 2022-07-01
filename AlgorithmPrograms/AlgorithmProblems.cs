@@ -8,36 +8,32 @@ namespace AlgorithmPrograms
 {
     public class AlgorithmProblems
     {
-        public static String swapString(String a, int i, int j)
+        public static int binarySearch(String[] arr, String x)
         {
-            char[] c = a.ToCharArray();
-            char ch;
-            ch = c[i];
-            c[i] = c[j];
-            c[j] = ch;
-
-            //Converting characters from array into single string  
-            return string.Join("", c);
-        }
-
-        //Function for generating permutations
-        public static void generatePermutation(String str, int start, int end)
-        {
-            //Prints the permutations  
-            if (start == end - 1)
-                Console.WriteLine(str);
-            else
+            int l = 0, r = arr.Length - 1;
+            while (l <= r)
             {
-                for (int i = start; i < end; i++)
+                int m = l + (r - l) / 2;
+
+                int res = x.CompareTo(arr[m]);
+
+                if (res == 0)
                 {
-                    //Swapping the string 
-                    str = swapString(str, start, i);
+                    return m;
+                }
 
-                    generatePermutation(str, start + 1, end);
+                if (res > 0)
+                {
+                    l = m + 1;
+                }
 
-                    str = swapString(str, start, i);
+                else
+                {
+                    r = m - 1;
                 }
             }
+            return -1;
         }
+
     }
 }
