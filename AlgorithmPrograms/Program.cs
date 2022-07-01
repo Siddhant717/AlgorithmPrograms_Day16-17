@@ -6,22 +6,12 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            // String array which has different strings
-            String[] arr = { "Aman", "Siddhant", "Riya", "Shreya", };
-
-            // Searching "Siddhant" string in the given array
-            String x = "Siddhant";
-            int result = AlgorithmProblems.binarySearch(arr, x);
-
-            if (result == -1)
-            {
-                Console.WriteLine("Element is not present");
-            }
-
-            else
-            {
-                Console.WriteLine("Element found at index : " + result);
-            }
+            int[] array = { 44, 12, 50, 20, 62 };
+            Console.WriteLine("Given Array is ");
+            AlgorithmProblems.printArray(array);
+            AlgorithmProblems.InsertionSortInt(array);
+            Console.WriteLine("After sorted is ");
+            AlgorithmProblems.printArray(array);
         }
     }
 }

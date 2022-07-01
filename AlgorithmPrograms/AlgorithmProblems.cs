@@ -8,31 +8,29 @@ namespace AlgorithmPrograms
 {
     public class AlgorithmProblems
     {
-        public static int binarySearch(String[] arr, String x)
+        public static void InsertionSortInt(int[] ar)
         {
-            int l = 0, r = arr.Length - 1;
-            while (l <= r)
+            for (int i = 1; i < ar.Length; i++)                                                                                                                                                 
             {
-                int m = l + (r - l) / 2;
 
-                int res = x.CompareTo(arr[m]);
-
-                if (res == 0)
+                int t = ar[i];                                                                                                                                         
+                int j = i - 1;                                                                                                                                                   
+                while (j >= 0 && ar[j] > t)          
                 {
-                    return m;
+                    ar[j + 1] = ar[j];                                                      
+                    j--;                                                                                                                                  
                 }
+                ar[j + 1] = t;                                                                                                                                                 
 
-                if (res > 0)
-                {
-                    l = m + 1;
-                }
-
-                else
-                {
-                    r = m - 1;
-                }
             }
-            return -1;
+
+        }
+        public static void printArray(int[] arr)
+        {
+            int n = arr.Length;
+            for (int i = 0; i < n; ++i)
+                Console.Write(arr[i] + " ");
+            Console.WriteLine();
         }
 
     }
