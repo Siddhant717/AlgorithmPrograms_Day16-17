@@ -8,29 +8,27 @@ namespace AlgorithmPrograms
 {
     public class AlgorithmProblems
     {
-        public void CheckAnagram(string str1, string str2)
+        public void CheckPrimeNumber()
         {
-
-            char[] ch1 = str1.ToLower().ToCharArray();
-            char[] ch2 = str2.ToLower().ToCharArray();
-
-            Array.Sort(ch1);
-            Array.Sort(ch2);
-
-            string val1 = new string(ch1);
-            string val2 = new string(ch2);
-
-            Console.WriteLine(val1);
-            Console.WriteLine(val2);
-
-            if (val1 == val2)
+            for (int i = 2; i <= 1000; i++)
             {
-                Console.WriteLine("It is a Anagram");
-            }
-            else
-            {
-                Console.WriteLine("It is not a Anagram");
+                bool isPrimeNumber = true;
+
+                for (int j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        isPrimeNumber = false;
+                        break;
+                    }
+
+                }
+                if (isPrimeNumber)
+                {
+                    Console.WriteLine(i + "");
+                }
             }
         }
     }
+
 }
