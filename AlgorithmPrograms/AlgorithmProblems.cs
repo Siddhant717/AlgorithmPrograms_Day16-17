@@ -2,33 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AlgorithmPrograms
 {
     public class AlgorithmProblems
     {
-        public void CheckPrimeNumber()
+       public static int search(int lo, int hi)
         {
-            for (int i = 2; i <= 1000; i++)
-            {
-                bool isPrimeNumber = true;
-
-                for (int j = 2; j < i; j++)
-                {
-                    if (i % j == 0)
-                    {
-                        isPrimeNumber = false;
-                        break;
-                    }
-
-                }
-                if (isPrimeNumber)
-                {
-                    Console.WriteLine(i + "");
-                }
-            }
+            if ((hi - lo) == 1)
+                return lo;
+            int mid = lo + (hi - lo) / 2;
+            Console.Write("is your number less than " + mid + " : ");
+            bool flag = bool.Parse(Console.ReadLine());
+            if (flag)
+                return search(lo, mid);
+            else return search(mid, hi);
         }
     }
-
 }
+

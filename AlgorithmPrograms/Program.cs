@@ -6,11 +6,11 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("Prime numbers present between 0 and 1000 are- ");
-            AlgorithmProblems primenumber = new AlgorithmProblems();
-            primenumber.CheckPrimeNumber();
-
+            Console.Write("enter a number : "); int k = Convert.ToInt32(Console.ReadLine());
+            int limit = (int)Math.Pow(2, k);
+            Console.WriteLine("Imagine a number between 0 and " + limit + " in your mind:");
+            int num = AlgorithmProblems.search(0, limit);
+            Console.WriteLine("Your number is " + num);
 
 
         }
