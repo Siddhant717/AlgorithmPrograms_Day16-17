@@ -6,12 +6,10 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            int[] array = { 44, 12, 50, 20, 62 };
+            int[] arr = { 22, 45, 10, 50, 16 };
             Console.WriteLine("Given Array is ");
-            AlgorithmProblems.printArray(array);
-            AlgorithmProblems.InsertionSortInt(array);
-            Console.WriteLine("After sorted is ");
-            AlgorithmProblems.printArray(array);
+            AlgorithmProblems.printArray(arr);
+           AlgorithmProblems.BubbleSorting(arr);
         }
     }
 }

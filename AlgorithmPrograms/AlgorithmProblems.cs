@@ -8,22 +8,27 @@ namespace AlgorithmPrograms
 {
     public class AlgorithmProblems
     {
-        public static void InsertionSortInt(int[] ar)
+        public static void BubbleSorting(int[] arr)
         {
-            for (int i = 1; i < ar.Length; i++)                                                                                                                                                 
+            int temp;
+            for (int j = 0; j <= arr.Length - 2; j++)
             {
-
-                int t = ar[i];                                                                                                                                         
-                int j = i - 1;                                                                                                                                                   
-                while (j >= 0 && ar[j] > t)          
+                for (int i = 0; i <= arr.Length - 2; i++)
                 {
-                    ar[j + 1] = ar[j];                                                      
-                    j--;                                                                                                                                  
+                    if (arr[i] > arr[i + 1])
+                    {
+                        temp = arr[i + 1];
+                        arr[i + 1] = arr[i];
+                        arr[i] = temp;
+                    }
                 }
-                ar[j + 1] = t;                                                                                                                                                 
-
             }
+            Console.WriteLine("Sorted Array is :");
 
+            foreach (int p in arr)
+            {
+                Console.Write(p + " ");
+            }
         }
         public static void printArray(int[] arr)
         {
