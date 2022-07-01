@@ -6,9 +6,9 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            String str = "STAR";
+            String str = "SID";
             int len = str.Length;
-            Console.WriteLine("All the permutations of the string are: ");
+            Console.WriteLine("All the permutations of the string are- ");
             AlgorithmProblems.generatePermutation(str, 0, len);
         }
     }
