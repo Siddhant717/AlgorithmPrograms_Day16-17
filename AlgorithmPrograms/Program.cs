@@ -6,16 +6,18 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            int[] array = { 12, 11, 13, 5, 6, 7 };
 
-            Console.WriteLine("Given Array");
-            AlgorithmProblems.printArray(array);
+            AlgorithmProblems anagram = new AlgorithmProblems();
 
-            AlgorithmProblems ob = new AlgorithmProblems();
-            ob.sort(array, 0, array.Length - 1);
+            Console.WriteLine("Enter 1 string ");
+            string string1 = Console.ReadLine();
+            Console.WriteLine("Enter 2 string ");
+            string string2 = Console.ReadLine();
 
-            Console.WriteLine("Sorted array");
-            AlgorithmProblems.printArray(array);
+            anagram.CheckAnagram(string1, string2);
+
+         
+
         }
     }
 }
